@@ -1,0 +1,34 @@
+.accordion
+    padding: 0
+    margin: 0
+    list-style: none
+    border: 1px solid $gray
+    border-radius: $border-radius
+    max-width: 400px
+
+    &-item
+        padding: $padding
+        &:not(:last-child)
+            border-bottom: 1px solid $gray
+
+        &.is-active
+            >.accordion-body
+                display: block
+            >.accordion-title .accordion-icon
+                transform: rotate(90deg)
+
+    &-body
+        display: none
+        overflow: hidden
+        padding: 0 $padding
+        transition: 0.4s
+
+    &-title
+        display: block
+        padding: $padding
+        width: 100%
+        font-weight: bold
+        cursor: pointer
+
+    &-icon
+        transition: 0.4s

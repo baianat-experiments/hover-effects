@@ -1,0 +1,57 @@
+.modal
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    background-color: alpha($dark, 90%)
+    overflow: auto
+    z-index: 99999
+
+    &-panel
+        position: relative
+        width: 500px
+        margin: 100px 0
+        max-width: 100%
+        border-radius: $border-radius
+        background-color: $white
+
+    &-header
+        padding: ($padding * 2)
+        border-bottom: 1px solid alpha($dark, 5%)
+
+    &-title
+        margin: 0
+
+    &-body
+        padding: $padding ($padding * 2)
+
+    &-footer
+        display: flex
+        justify-content: space-between
+        flex-direction: row-reverse
+        padding: $padding
+        background-color: alpha($dark, 5%)
+
+    &-dismiss
+        position: absolute
+        top: 0
+        {$end-direction}: 0
+        padding: $padding
+        _icon-color: $gray
+        &:hover
+            _icon-color: $red
+
+    &.is-hidden
+        display: none
+
+    &.is-visable
+        display: flex
+
+    &.is-clear
+        .modal-panel
+            background-color: alpha($dark, 50%)
+            color: $white

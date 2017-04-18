@@ -1,0 +1,465 @@
+$dark = #182F32
+
+fullContainer
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+transition
+    transition: 0.5s
+
+
+flexCenter
+    display: flex
+    justify-content: center
+    align-items: center
+
+.hover
+    @extends transition
+    position: relative
+    width: 100%
+    height: 300px
+    margin: 0
+    overflow: hidden
+    cursor: pointer
+    perspective: 1000px
+    &-image
+        @extends fullContainer
+        @extends transition
+        z-index: 1
+        background-repeat: no-repeat
+        background-position: center
+        background-position: center
+        background-size: cover
+        &:after
+            @extends fullContainer
+            @extends transition
+            content: ''
+            display: block
+            background-color: alpha($dark, 0.4)
+    >a
+        @extends fullContainer
+        opacity: 0
+        z-index: 10
+
+    &-title
+        @extends transition
+        position: absolute
+        top: 0
+        left: 0
+        color: $white
+        font-weight: lighter
+        font-size: 30px
+        margin: 50px 0 0 50px
+        z-index: 5
+
+    &-caption
+        @extends transition
+        padding: 20px
+        position: absolute
+        top: 70px
+        left: 30px
+        color: $white
+        text-shadow: 2px 2px 4px alpha($dark, 0.2)
+        z-index: 4
+
+    &-button
+        @extends transition
+        display: inline-block
+        padding: 10px 20px
+        border: 1px solid $white
+        border-radius: 100px
+        color: $white
+        text-decoration: none
+        cursor: pointer
+
+    &-icons
+        @extends transition
+        @extends flexCenter
+        position: relative
+        z-index: 10
+        background-color: alpha($dark, 0.7)
+        padding: 10px
+        margin: auto
+
+    &-icon
+        @extends transition
+        padding: 10px
+        margin: 0 20px
+        text-decoration: none
+        cursor: pointer
+        fill: $white
+        .icon
+            width: 30px
+            height: 30px
+        &:hover
+            fill: $blue
+
+    &.effect-1
+        .hover-caption
+            opacity: 0
+        .hover-image
+            &:after
+                width: 0
+
+        &:hover
+            .hover-caption
+                opacity: 1
+            .hover-image
+                &:after
+                    width: 100%
+
+    &.effect-2
+        .hover-caption
+            opacity: 0
+        .hover-image
+            transform: scale(1)
+            transition: 5s
+        &:hover
+            .hover-caption
+                opacity: 1
+            .hover-image
+                transform: scale(2)
+
+    &.effect-3
+        .hover-image
+            transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28)
+            transform-origin: bottom center
+        .hover-caption
+            transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28)
+            transform: translate(-100%, 0)
+        &:hover
+            .hover-image
+                transform: rotateX(10deg)
+            .hover-caption
+                transform: translate(0, 0)
+
+    &.effect-4
+        .hover-image
+            transition: 0.5s
+            transform-origin: center left
+        .hover-caption
+            transform: translate(0, -100%)
+            opacity: 0
+        &:hover
+            .hover-image
+                transform: rotateY(10deg)
+            .hover-caption
+                transform: translate(0, 0)
+                opacity: 1
+
+    &.effect-5
+        .hover-image
+            transition: 0.5s
+            transform-origin: center left
+        .hover-caption
+            background-color: $blue
+            top: auto
+            height: 70px
+            width: 100%
+            left: 0
+            bottom: -70px
+            >p
+                margin: 0
+                line-height: 30px
+        &:hover
+            .hover-image
+                transform: translate(0, -40px)
+            .hover-caption
+                bottom: 0
+
+    &.effect-6
+        .hover-title
+            margin: 50px 0 0
+            width: 100%
+            text-align: center
+        .hover-caption
+            width: 100%
+            top: auto
+            bottom: 0
+            left: 0
+            padding: 0
+            opacity: 1
+        .hover-icons
+            opacity: 0
+        .hover-icon
+            transition: 0.5s cubic-bezier(0.4, 0, 0, 1)
+            transform: translate(0, 200%)
+        for $n in (1..5)
+            .hover-icon:nth-child({$n})
+                transition-delay: $n * 0.1s
+        &:hover
+            .hover-icons
+                opacity: 1
+            .hover-icon
+                transition-delay: 0 !important
+                transform: translate(0, 0)
+
+    &.effect-7
+        .hover-title
+            margin: 50px 0 0
+            width: 100%
+            text-align: center
+        .hover-caption
+            @extends fullContainer
+            opacity: 1
+            z-index: 11
+            width: 100%
+            bottom: 0
+            left: 0
+        .hover-icons
+            @extends fullContainer
+            opacity: 0
+        .hover-icon
+            position: absolute
+            margin: -25px 0 0 -25px
+            transition: 0.5s cubic-bezier(0.4, 0, 0, 1)
+            top: 120%
+            left: 50%
+        for $n in (1..5)
+            .hover-icon:nth-child({$n})
+                transition-delay: $n * 0.1s
+
+        &:hover
+            .hover-icons
+                opacity: 1
+            .hover-icon
+                transition-delay: 0
+            .hover-icon:nth-child(1)
+                top: 25%
+                left: 50%
+            .hover-icon:nth-child(2)
+                top: 50%
+                left: 35%
+            .hover-icon:nth-child(3)
+                top: 75%
+                left: 50%
+            .hover-icon:nth-child(4)
+                top: 50%
+                left: 65%
+
+    &.effect-8
+        .hover-title
+            margin: 50px 0 0
+            width: 100%
+            text-align: center
+        .hover-caption
+            >*
+                transform: translate(-200%, 0)
+                transition: 0.4s cubic-bezier(0.4, 0, 0, 1)
+                display: table
+                margin: 5px 0
+                padding: 5px 10px
+                background-color: $white
+                color: $dark
+                text-shadow: none
+            for $n in (1..5)
+                >*:nth-child({$n})
+                    transition-delay: $n * 0.2s
+        &:hover
+            .hover-caption
+                >*
+                    transform: translate(0, 0)
+
+    &.effect-9
+        .hover-title
+            margin: 50px 0 0
+            width: 100%
+            text-align: center
+        .hover-caption
+            padding: 10px 0
+            right: 30px
+            top: auto
+            bottom: 30px
+            text-align: right
+            border-right: 0
+            opacity: 0
+            >*
+                margin: 5px 0
+        .hover-image:after
+            background-image: linear-gradient(30deg, alpha($blue, 0.5), alpha($red, 0.7))
+            opacity: 0.2
+        &:hover
+            .hover-image:after
+                opacity: 1
+            .hover-caption
+                padding: 10px 30px
+                border-right: 3px solid $white
+                opacity: 1
+
+    &.effect-10
+        transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+        .hover-caption
+            >*
+                transition: all 0.5s 0.5s
+                margin: -10px 0
+                opacity: 0
+        &:hover
+            box-shadow: 4px 12px 20px -2px alpha($dark, 0.7)
+            transform: translate(-5px, -15px)
+            .hover-caption
+                >*
+                    opacity: 1
+                    margin: 10px 0
+
+    &.effect-11
+        .hover-caption
+            opacity: 0
+            transform: translate(0, -100%)
+            transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+        &:hover
+            .hover-caption
+                opacity: 1
+                transform: translate(0, 10px)
+            .hover-image
+                filter: blur(2px) sepia(70%)
+                transform: scale(1.1)
+
+    &.effect-12
+        .hover-caption
+            transform: rotateY(90deg)
+            opacity: 0
+        .hover-button
+            border: 0
+            background-image: linear-gradient(210deg, alpha($blue, 0.3), alpha($green, 0.3))
+            &:hover
+                box-shadow: 2px 8px 10px -2px alpha($dark, 0.7)
+                transform: translate(-2px, -10px)
+        &:hover
+            .hover-caption
+                transform: rotateY(0)
+                opacity: 1
+            .hover-image:after
+                background-image: linear-gradient(210deg, alpha($blue, 0.5), alpha($green, 0.5))
+
+    &.effect-13
+        .hover-image
+            width: 100%
+            height: 100%
+            overflow: hidden
+            &:after
+                background-color: alpha($white, 0.2)
+        .hover-title
+            color: $dark
+        .hover-caption
+            top: 150px
+            color: $dark
+            padding: 10px 0
+            z-index: -1
+        &:hover
+            .hover-title
+                left: 150px
+                top: 25px
+                line-height: 50px
+            .hover-image
+                top: 20px
+                left: 20px
+                width: 150px
+                height: 150px
+                border-radius: 50%
+
+    &.effect-14
+        .hover-title:after
+            transition: 0.5s
+            content: ''
+            display: block
+            width: 0
+            height: 2px
+            background-color: $white
+
+        .hover-caption
+            top: 70px
+        &:hover
+            .hover-title:after
+                width: 100%
+            .hover-image:after
+                border: 10px solid $red
+                background-color: alpha($dark, 0.7)
+
+    &.effect-15
+        .hover-title
+            margin: 20px 0 0
+            width: 100%
+            text-align: center
+            text-shadow: 2px 2px 4px alpha($dark, 0.2)
+        .hover-caption
+            background-color: $red
+            width: 70%
+            left: 15%
+            padding: 20px
+            transform: translate(0, -200%)
+            transition-delay: 0.4s
+            z-index: 11
+        .hover-image
+            transform-origin: bottom center
+        &:hover
+            .hover-title
+                color: $red
+            .hover-caption
+                transform: translate(0, 0)
+                box-shadow: 0 7px 6px -6px alpha($dark, 0.8)
+            .hover-image
+                transform: rotateX(80deg)
+
+    &.effect-16
+        .hover-title
+            margin: 20px 0 0
+            width: 100%
+            text-align: center
+            text-shadow: 2px 2px 4px alpha($dark, 0.2)
+        .hover-caption
+            background-color: $blue
+            width: 70%
+            left: 15%
+            padding: 20px
+            transform: translate(200%, 0)
+            transition-delay: 0.1s
+            z-index: 11
+        .hover-image
+            transform-origin: left center
+        &:hover
+            .hover-title
+                color: $blue
+            .hover-caption
+                transform: translate(0, 0)
+                box-shadow: -7px 0 6px -6px alpha($dark, 0.8)
+            .hover-image
+                transform: rotateY(80deg)
+
+    &.effect-17
+        .hover-title
+            color: $dark
+        .hover-image:after
+            height: 100%
+            top: 100px
+            background-color: transparent
+            background-image: linear-gradient(transparent, $dark);
+        .hover-caption
+            opacity: 0
+        &:hover
+            .hover-title
+                color: $white
+            .hover-image:after
+                background-color: alpha($dark, 0.2)
+                top: 0
+            .hover-caption
+                opacity: 1
+                top: 100px
+
+    &.effect-18
+        .hover-title
+            text-shadow: 4px 4px 8px alpha($dark, 0.5)
+        .hover-caption
+            transition: 0.4s ease-in
+            opacity: 0
+            transform: scale(4)
+        .hover-image
+            transform: scale(1.2)
+        &:hover
+            .hover-caption
+                opacity: 1
+                transform: scale(1)
+            .hover-image
+                transform: scale(1)

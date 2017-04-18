@@ -1,0 +1,22 @@
+.textarea
+    display: block
+    padding: $padding
+    border-radius: $border-radius
+    font-size: $font-default
+    line-height: 1em
+    border-width: 1px
+    border-style: solid
+    border-color: $gray
+    text-align: $start-direction
+    color: $dark
+    margin: ($margin / 2) 0
+    resize: none
+    width: 100%
+
+    &:focus
+        outline: 0
+        border-color: $blue
+        + .input-group-icon
+            fill: $blue
+            color: $blue
+            stroke: $blue

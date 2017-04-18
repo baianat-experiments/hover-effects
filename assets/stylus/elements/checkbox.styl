@@ -1,0 +1,35 @@
+.checkbox
+    margin: ($margin / 2) 0
+    &-input
+        display: none
+        &:checked
+            + .checkbox-label .checkbox-box:before
+                border-left: 0
+                border-top: 0
+                transform: rotate(45deg)
+                width: 7px
+                border-radius: 0
+    &-label
+        display: inline-flex
+        line-height: 17px
+        font-size: 15px
+        color: $dark
+        &:hover
+            color: $blue
+
+    &-box
+        display: inline
+        width: 15px
+        height: 15px
+        padding: 0
+        margin-{$end-direction}: $margin
+        cursor: pointer
+        &:before
+            content: ''
+            display: block
+            width: 15px
+            height: 15px
+            border-radius: 2px
+            border: 1px solid $blue
+            transition: 0.5s
+            transform-origin: center right

@@ -1,0 +1,46 @@
+.buttons
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    +mobile()
+        flex-direction: column
+    .button
+        &:not(:first-child):not(:last-child)
+            border-width: 1px 0
+            border-radius: 0
+        &:first-child
+            border-top-{$end-direction}-radius: 0
+            border-bottom-{$end-direction}-radius: 0
+        &:last-child
+            border-top-{$start-direction}-radius: 0
+            border-bottom-{$start-direction}-radius: 0
+
+        +mobile()
+            width: 100%
+            &:not(:first-child):not(:last-child)
+                border-width: 0 1px
+            &:first-child
+                border-radius: $border-radius
+                border-bottom-right-radius: 0
+                border-bottom-left-radius: 0
+            &:last-child
+                border-radius: $border-radius
+                border-top-right-radius: 0
+                border-top-left-radius: 0
+
+    >.label
+        margin: -11px -14px
+
+    &.is-block
+        >.button
+            width: 100%
+    &.is-tiny
+        >.button
+            font-size: $font-small
+            padding: 5px
+    &.is-small
+        >.button
+            font-size: $font-small
+    &.is-large
+        >.button
+            font-size: $font-large

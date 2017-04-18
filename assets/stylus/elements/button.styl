@@ -1,0 +1,148 @@
+.button
+    position: relative
+    display: inline-block
+    padding: $padding ($padding * 2)
+    border-radius: $border-radius
+    color: $dark
+    text-decoration: none
+    font-size: $font-default
+    font-weight: lighter
+    line-height: 1em
+    border-width: 1px
+    border-style: solid
+    text-align: center
+    color: $white
+    background-clip: border-box
+    outline-offset: 1px
+    outline-width: 3px
+    outline-color: darken($blue, 40%)
+    _icon-color: $white
+    .icon:first-child:not(:last-child)
+        margin-{$start-direction}: (-1 * $padding / 2)
+        margin-{$end-direction}: ($padding / 2)
+    .icon:last-child:not(:last-child)
+        margin-{$start-direction}: ($padding / 2)
+        margin-{$end-direction}: (-1 * $padding / 2)
+    span
+        line-height: inherit
+    .icon:only-child
+        margin: 0 (-1 * $padding)
+
+    &:hover
+        text-decoration: none
+
+    .label
+        margin: (-1 * $padding) 0
+        margin-{$start-direction}: $padding
+        margin-{$end-direction}: (-1 * $padding)
+
+    /**
+     * modiffers
+     */
+    &.is-inverse
+        border-width: 1px
+
+    &.is-block
+        width: 100%
+    &.is-tiny
+        font-size: $font-small
+        padding: 5px
+    &.is-small
+        font-size: $font-small
+    &.is-large
+        font-size: $font-large
+
+    &.is-rounded
+        border-radius: 10em
+        border-width: 1px
+
+    &.is-embossed
+        box-shadow: inset 0 -2px 0 alpha($black, 0.15)
+        &:focus
+            box-shadow: inset 0 2px 0 alpha($black, 0.15)
+
+    &.is-floating
+        box-shadow: 0 4px 6px -3px alpha($black, 0.4)
+        &:focus
+            box-shadow: 0 2px 2px -3px alpha($black, 0.4)
+        &.is-embossed
+            box-shadow: inset 0 -2px 0 alpha($black, 0.15), 0 4px 6px -3px alpha($black, 0.4)
+            &:focus
+                box-shadow: inset 0 2px 0 alpha($black, 0.15), 0 2px 2px -3px alpha($black, 0.4)
+    &
+    &.is-default
+    &.is-dark
+        background-color: $dark
+        border-color: darken($dark, 10%)
+        &:hover
+        &:focus
+            background-color: darken($dark, 10%)
+        &.is-inverse
+            background-color: transparent
+            color: $dark
+            &:hover
+            &:focus
+                border-color: darken($dark, 20%)
+
+
+    &.is-primary
+    &.is-blue
+        background-color: $blue
+        border-color: $blue
+        &:hover
+        &:focus
+            background-color: darken($blue, 10%)
+        &.is-inverse
+            background-color: transparent
+            color: $blue
+            _icon-color: $blue
+            &:hover
+            &:focus
+                border-color: darken($blue, 20%)
+
+    &.is-error
+    &.is-red
+        background-color: $red
+        border-color: $red
+        &:hover
+        &:focus
+            background-color: darken($red, 10%)
+        &.is-inverse
+            background-color: transparent
+            color: $red
+            _icon-color: $red
+            &:hover
+            &:focus
+                border-color: darken($red, 20%)
+
+    &.is-success
+    &.is-green
+        background-color: $green
+        border-color: $green
+        &:hover
+        &:focus
+            background-color: darken($green, 10%)
+        &.is-inverse
+            background-color: transparent
+            color: $green
+            _icon-color: $green
+            &:hover
+            &:focus
+                border-color: darken($green, 20%)
+
+    &.is-disabled
+    &[disabled]
+        background-color: $gray
+        border-color: $gray
+        color: alpha($white, 75%)
+        opacity: 0.75
+        cursor: not-allowed
+        _icon-color: $alpha($white, 75%)
+        &:hover
+        &:focus
+            background-color: $gray
+            border-color: $gray
+        &.is-inverse
+            background-color: transparent
+            color: alpha($gray, 75%)
+            _icon-color: alpha($gray, 75%)

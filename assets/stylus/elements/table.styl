@@ -1,0 +1,62 @@
+.table
+    border-collapse: separate
+    border-spacing: 0
+    border: 1px solid $gray
+    width: 100%
+    border-radius: $border-radius
+    color: $dark
+    overflow: hidden
+    text-align: left
+    &:not(:last-child)
+        margin-bottom: $margin
+
+    th
+    td
+        padding: $padding
+        font-size: $font-default
+        &:not(:last-child)
+            border-right: 1px solid $gray
+            +mobile()
+                border-right: 0
+        +mobile()
+            display: block
+            width: 100%
+
+    thead
+        th
+            border-bottom: 1px solid $gray
+            font-weight: bold
+            +mobile()
+                border-bottom: 0
+    tfoot
+        th
+            border-top: 1px solid $gray
+
+    tbody
+        tr
+            +mobile()
+                display: block
+                border-top: 1px solid $gray
+        td
+            border-top: 1px solid $gray
+            +mobile()
+                border: 0
+
+    &.is-striped
+        tr:nth-child(2n)
+            td
+                background-color: darken($white, 2%)
+
+    &.is-relaxed
+        padding: ($padding * 2) ($padding * 4)
+        th
+        td
+            padding: ($padding * 2)
+
+    &.is-line
+        th
+        td
+            border-right: 0
+
+    &.is-center
+        text-align: center
