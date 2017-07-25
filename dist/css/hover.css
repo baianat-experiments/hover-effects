@@ -1,0 +1,614 @@
+/**
+ * colorful
+ */
+/**
+ * grayscale
+ */
+fullContainer,
+.hover-image,
+.hover-image:after,
+.hover >a,
+.hover.effect-7 .hover-caption,
+.hover.effect-7 .hover-icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+transition,
+.hover,
+.hover-image,
+.hover-image:after,
+.hover-title,
+.hover-caption,
+.hover-button,
+.hover-icons,
+.hover-icon {
+  transition: 0.5s;
+}
+flexCenter,
+.hover-icons {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hover {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.hover-image {
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: center;
+  background-size: cover;
+}
+.hover-image:after {
+  content: '';
+  display: block;
+  background-color: rgba(24,47,50,0.4);
+}
+.hover >a {
+  opacity: 0;
+  z-index: 10;
+}
+.hover-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 30px;
+  margin: 50px 0 0 50px;
+  z-index: 5;
+}
+.hover-caption {
+  padding: 20px;
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(24,47,50,0.2);
+  z-index: 4;
+}
+.hover-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.hover-icons {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(24,47,50,0.7);
+  padding: 10px;
+  margin: auto;
+}
+.hover-icon {
+  padding: 10px;
+  margin: 0 20px;
+  text-decoration: none;
+  cursor: pointer;
+  fill: #fff;
+}
+.hover-icon .icon {
+  width: 30px;
+  height: 30px;
+}
+.hover-icon:hover {
+  fill: #3c83f2;
+}
+.hover.effect-1 .hover-caption {
+  opacity: 0;
+}
+.hover.effect-1 .hover-image:after {
+  width: 0;
+}
+.hover.effect-1:hover .hover-caption {
+  opacity: 1;
+}
+.hover.effect-1:hover .hover-image:after {
+  width: 100%;
+}
+.hover.effect-2 .hover-caption {
+  opacity: 0;
+}
+.hover.effect-2 .hover-image {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  transition: 5s;
+}
+.hover.effect-2:hover .hover-caption {
+  opacity: 1;
+}
+.hover.effect-2:hover .hover-image {
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+}
+.hover.effect-3 .hover-image {
+  transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+.hover.effect-3 .hover-caption {
+  transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+.hover.effect-3:hover .hover-image {
+  -webkit-transform: rotateX(10deg);
+          transform: rotateX(10deg);
+}
+.hover.effect-3:hover .hover-caption {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.hover.effect-4 .hover-image {
+  transition: 0.5s;
+  -webkit-transform-origin: center left;
+      -ms-transform-origin: center left;
+          transform-origin: center left;
+}
+.hover.effect-4 .hover-caption {
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  opacity: 0;
+}
+.hover.effect-4:hover .hover-image {
+  -webkit-transform: rotateY(10deg);
+          transform: rotateY(10deg);
+}
+.hover.effect-4:hover .hover-caption {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+.hover.effect-5 .hover-image {
+  transition: 0.5s;
+  -webkit-transform-origin: center left;
+      -ms-transform-origin: center left;
+          transform-origin: center left;
+}
+.hover.effect-5 .hover-caption {
+  background-color: #3c83f2;
+  top: auto;
+  height: 70px;
+  width: 100%;
+  left: 0;
+  bottom: -70px;
+}
+.hover.effect-5 .hover-caption >p {
+  margin: 0;
+  line-height: 30px;
+}
+.hover.effect-5:hover .hover-image {
+  -webkit-transform: translate(0, -40px);
+      -ms-transform: translate(0, -40px);
+          transform: translate(0, -40px);
+}
+.hover.effect-5:hover .hover-caption {
+  bottom: 0;
+}
+.hover.effect-6 .hover-title {
+  margin: 50px 0 0;
+  width: 100%;
+  text-align: center;
+}
+.hover.effect-6 .hover-caption {
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  opacity: 1;
+}
+.hover.effect-6 .hover-icons {
+  opacity: 0;
+}
+.hover.effect-6 .hover-icon {
+  transition: 0.5s cubic-bezier(0.4, 0, 0, 1);
+  -webkit-transform: translate(0, 200%);
+      -ms-transform: translate(0, 200%);
+          transform: translate(0, 200%);
+}
+.hover.effect-6 .hover-icon:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.hover.effect-6 .hover-icon:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.hover.effect-6 .hover-icon:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.hover.effect-6 .hover-icon:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.hover.effect-6 .hover-icon:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.hover.effect-6:hover .hover-icons {
+  opacity: 1;
+}
+.hover.effect-6:hover .hover-icon {
+  transition-delay: 0 !important;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.hover.effect-7 .hover-title {
+  margin: 50px 0 0;
+  width: 100%;
+  text-align: center;
+}
+.hover.effect-7 .hover-caption {
+  opacity: 1;
+  z-index: 11;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.hover.effect-7 .hover-icons {
+  opacity: 0;
+}
+.hover.effect-7 .hover-icon {
+  position: absolute;
+  margin: -25px 0 0 -25px;
+  transition: 0.5s cubic-bezier(0.4, 0, 0, 1);
+  top: 120%;
+  left: 50%;
+}
+.hover.effect-7 .hover-icon:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.hover.effect-7 .hover-icon:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.hover.effect-7 .hover-icon:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.hover.effect-7 .hover-icon:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.hover.effect-7 .hover-icon:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.hover.effect-7:hover .hover-icons {
+  opacity: 1;
+}
+.hover.effect-7:hover .hover-icon {
+  transition-delay: 0;
+}
+.hover.effect-7:hover .hover-icon:nth-child(1) {
+  top: 25%;
+  left: 50%;
+}
+.hover.effect-7:hover .hover-icon:nth-child(2) {
+  top: 50%;
+  left: 35%;
+}
+.hover.effect-7:hover .hover-icon:nth-child(3) {
+  top: 75%;
+  left: 50%;
+}
+.hover.effect-7:hover .hover-icon:nth-child(4) {
+  top: 50%;
+  left: 65%;
+}
+.hover.effect-8 .hover-title {
+  margin: 50px 0 0;
+  width: 100%;
+  text-align: center;
+}
+.hover.effect-8 .hover-caption >* {
+  -webkit-transform: translate(-200%, 0);
+      -ms-transform: translate(-200%, 0);
+          transform: translate(-200%, 0);
+  transition: 0.4s cubic-bezier(0.4, 0, 0, 1);
+  display: table;
+  margin: 5px 0;
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #182f32;
+  text-shadow: none;
+}
+.hover.effect-8 .hover-caption >*:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.hover.effect-8 .hover-caption >*:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.hover.effect-8 .hover-caption >*:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.hover.effect-8 .hover-caption >*:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.hover.effect-8 .hover-caption >*:nth-child(5) {
+  transition-delay: 1s;
+}
+.hover.effect-8:hover .hover-caption >* {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.hover.effect-9 .hover-title {
+  margin: 50px 0 0;
+  width: 100%;
+  text-align: center;
+}
+.hover.effect-9 .hover-caption {
+  padding: 10px 0;
+  right: 30px;
+  top: auto;
+  bottom: 30px;
+  text-align: right;
+  border-right: 0;
+  opacity: 0;
+}
+.hover.effect-9 .hover-caption >* {
+  margin: 5px 0;
+}
+.hover.effect-9 .hover-image:after {
+  background-image: linear-gradient(30deg, rgba(60,131,242,0.5), rgba(234,79,82,0.7));
+  opacity: 0.2;
+}
+.hover.effect-9:hover .hover-image:after {
+  opacity: 1;
+}
+.hover.effect-9:hover .hover-caption {
+  padding: 10px 30px;
+  border-right: 3px solid #fff;
+  opacity: 1;
+}
+.hover.effect-10 {
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.hover.effect-10 .hover-caption >* {
+  transition: all 0.5s 0.5s;
+  margin: -10px 0;
+  opacity: 0;
+}
+.hover.effect-10:hover {
+  box-shadow: 4px 12px 20px -2px rgba(24,47,50,0.7);
+  -webkit-transform: translate(-5px, -15px);
+      -ms-transform: translate(-5px, -15px);
+          transform: translate(-5px, -15px);
+}
+.hover.effect-10:hover .hover-caption >* {
+  opacity: 1;
+  margin: 10px 0;
+}
+.hover.effect-11 .hover-caption {
+  opacity: 0;
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.hover.effect-11:hover .hover-caption {
+  opacity: 1;
+  -webkit-transform: translate(0, 10px);
+      -ms-transform: translate(0, 10px);
+          transform: translate(0, 10px);
+}
+.hover.effect-11:hover .hover-image {
+  -webkit-filter: blur(2px) sepia(70%);
+          filter: blur(2px) sepia(70%);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.hover.effect-12 .hover-caption {
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  opacity: 0;
+}
+.hover.effect-12 .hover-button {
+  border: 0;
+  background-image: linear-gradient(210deg, rgba(60,131,242,0.3), rgba(56,228,183,0.3));
+}
+.hover.effect-12 .hover-button:hover {
+  box-shadow: 2px 8px 10px -2px rgba(24,47,50,0.7);
+  -webkit-transform: translate(-2px, -10px);
+      -ms-transform: translate(-2px, -10px);
+          transform: translate(-2px, -10px);
+}
+.hover.effect-12:hover .hover-caption {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
+}
+.hover.effect-12:hover .hover-image:after {
+  background-image: linear-gradient(210deg, rgba(60,131,242,0.5), rgba(56,228,183,0.5));
+}
+.hover.effect-13 .hover-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.hover.effect-13 .hover-image:after {
+  background-color: rgba(255,255,255,0.2);
+}
+.hover.effect-13 .hover-title {
+  color: #182f32;
+}
+.hover.effect-13 .hover-caption {
+  top: 150px;
+  color: #182f32;
+  padding: 10px 0;
+  z-index: -1;
+}
+.hover.effect-13:hover .hover-title {
+  left: 150px;
+  top: 25px;
+  line-height: 50px;
+}
+.hover.effect-13:hover .hover-image {
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.hover.effect-14 .hover-title:after {
+  transition: 0.5s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+}
+.hover.effect-14 .hover-caption {
+  top: 70px;
+}
+.hover.effect-14:hover .hover-title:after {
+  width: 100%;
+}
+.hover.effect-14:hover .hover-image:after {
+  border: 10px solid #ea4f52;
+  background-color: rgba(24,47,50,0.7);
+}
+.hover.effect-15 .hover-title {
+  margin: 20px 0 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(24,47,50,0.2);
+}
+.hover.effect-15 .hover-caption {
+  background-color: #ea4f52;
+  width: 70%;
+  left: 15%;
+  padding: 20px;
+  -webkit-transform: translate(0, -200%);
+      -ms-transform: translate(0, -200%);
+          transform: translate(0, -200%);
+  transition-delay: 0.4s;
+  z-index: 11;
+}
+.hover.effect-15 .hover-image {
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+.hover.effect-15:hover .hover-title {
+  color: #ea4f52;
+}
+.hover.effect-15:hover .hover-caption {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  box-shadow: 0 7px 6px -6px rgba(24,47,50,0.8);
+}
+.hover.effect-15:hover .hover-image {
+  -webkit-transform: rotateX(80deg);
+          transform: rotateX(80deg);
+}
+.hover.effect-16 .hover-title {
+  margin: 20px 0 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(24,47,50,0.2);
+}
+.hover.effect-16 .hover-caption {
+  background-color: #3c83f2;
+  width: 70%;
+  left: 15%;
+  padding: 20px;
+  -webkit-transform: translate(200%, 0);
+      -ms-transform: translate(200%, 0);
+          transform: translate(200%, 0);
+  transition-delay: 0.1s;
+  z-index: 11;
+}
+.hover.effect-16 .hover-image {
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+}
+.hover.effect-16:hover .hover-title {
+  color: #3c83f2;
+}
+.hover.effect-16:hover .hover-caption {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  box-shadow: -7px 0 6px -6px rgba(24,47,50,0.8);
+}
+.hover.effect-16:hover .hover-image {
+  -webkit-transform: rotateY(80deg);
+          transform: rotateY(80deg);
+}
+.hover.effect-17 .hover-title {
+  color: #182f32;
+}
+.hover.effect-17 .hover-image:after {
+  height: 100%;
+  top: 100px;
+  background-color: transparent;
+  background-image: linear-gradient(transparent, #182f32);
+}
+.hover.effect-17 .hover-caption {
+  opacity: 0;
+}
+.hover.effect-17:hover .hover-title {
+  color: #fff;
+}
+.hover.effect-17:hover .hover-image:after {
+  background-color: rgba(24,47,50,0.2);
+  top: 0;
+}
+.hover.effect-17:hover .hover-caption {
+  opacity: 1;
+  top: 100px;
+}
+.hover.effect-18 .hover-title {
+  text-shadow: 4px 4px 8px rgba(24,47,50,0.5);
+}
+.hover.effect-18 .hover-caption {
+  transition: 0.4s ease-in;
+  opacity: 0;
+  -webkit-transform: scale(4);
+      -ms-transform: scale(4);
+          transform: scale(4);
+}
+.hover.effect-18 .hover-image {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.hover.effect-18:hover .hover-caption {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.hover.effect-18:hover .hover-image {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+/*# sourceMappingURL=hover.css.map */
